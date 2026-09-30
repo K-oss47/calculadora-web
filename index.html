@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora web</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <h1>Calculadora web</h1>
+    <p>Suma, resta, multiplica y divide. Tus cálculos se guardan hasta que decidas borrarlos.</p>
+  </header>
+
+  <main class="app">
+
+    <section class="calculadora" aria-label="Calculadora">
+      <div class="pantalla" aria-live="polite">
+        <p id="expresion" class="expresion"></p>
+        <p id="numero" class="numero">0</p>
+      </div>
+
+      <div class="teclas">
+        <button type="button" class="tecla accion" data-accion="limpiar" aria-label="Limpiar todo">C</button>
+        <button type="button" class="tecla accion" data-accion="borrar" aria-label="Borrar último dígito">⌫</button>
+        <button type="button" class="tecla operador" data-op="/" aria-label="Dividir">÷</button>
+        <button type="button" class="tecla operador" data-op="*" aria-label="Multiplicar">×</button>
+
+        <button type="button" class="tecla" data-num="7">7</button>
+        <button type="button" class="tecla" data-num="8">8</button>
+        <button type="button" class="tecla" data-num="9">9</button>
+        <button type="button" class="tecla operador" data-op="-" aria-label="Restar">−</button>
+
+        <button type="button" class="tecla" data-num="4">4</button>
+        <button type="button" class="tecla" data-num="5">5</button>
+        <button type="button" class="tecla" data-num="6">6</button>
+        <button type="button" class="tecla operador" data-op="+" aria-label="Sumar">+</button>
+
+        <button type="button" class="tecla" data-num="1">1</button>
+        <button type="button" class="tecla" data-num="2">2</button>
+        <button type="button" class="tecla" data-num="3">3</button>
+        <button type="button" class="tecla igual" data-accion="igual" aria-label="Igual">=</button>
+
+        <button type="button" class="tecla cero" data-num="0">0</button>
+        <button type="button" class="tecla" data-accion="punto" aria-label="Punto decimal">.</button>
+      </div>
+    </section>
+
+    <aside class="historial" aria-label="Historial de cálculos">
+      <div class="historial-cabecera">
+        <h2>🕘 Historial</h2>
+        <span id="contador" class="contador">0 cálculos</span>
+      </div>
+
+      <ul id="lista" class="lista"></ul>
+      <p id="vacio" class="vacio">Aún no hay cálculos. Haz una operación y aparecerá aquí.</p>
+
+      <button type="button" id="borrar-todo" class="borrar-todo">🗑️ Borrar historial</button>
+    </aside>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Kelvin Mercedes · HTML5, CSS3 y JavaScript</p>
+  </footer>
+
+  <script src="calculadora.js"></script>
+</body>
+</html>
